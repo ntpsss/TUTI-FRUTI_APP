@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>McDonalds Chat</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+
+  <!-- ЛЕВАЯ ЧАСТЬ: бренд + кнопка друзей -->
+  <div class="topbar-left">
+    <div class="brand">
+      <h1 class="title">McDonalds Chat</h1>
+      <div class="subtitle">Простой локальный чат</div>
+    </div>
+
+    <div class="add-friend-wrap">
+      <button id="addFriendBtn" type="button" title="Список друзей">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <line x1="19" y1="8" x2="19" y2="14"/>
+          <line x1="22" y1="11" x2="16" y2="11"/>
+        </svg>
+        Друзья
+        <span class="friend-badge" id="friendCount">0</span>
+      </button>
+
+      <div id="addFriendMenu">
+        <div class="friendMenu-title">👥 Список друзей</div>
+        <div style="display:flex;gap:8px;">
+          <input id="friendInput" type="text" placeholder="Имя пользователя" maxlength="16">
+          <button id="addFriendSubmit" type="button">+ Добавить</button>
+        </div>
+        <div class="friend-divider">Мои друзья</div>
+        <div class="friend-list" id="friendList">
+          <div class="friends-empty">Список пуст</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПРАВАЯ ЧАСТЬ: без изменений -->
+ <div class="login_css">
+
+  <div class="loginbtn" style="display:flex; gap:8px;">
+  <div id="authButtons">
+    <button id="loginBtn">Войти</button>
+    <button id="registerBtn">Регистрация</button>
+  </div>
+  <button id="logoutBtn" style="display:none;">Выйти</button>
+</div>
+  <div id="loginMenu" class="hidden">
+    <input id="login" type="text" placeholder="Логин">
+    <input id="password" type="password" placeholder="Пароль">
+    <button id="loginSubmit">Войти</button>
+  </div>
+
+  <div id="registerMenu" class="hidden">
+    <input id="regLogin" type="text" placeholder="Логин">
+    <input id="regPassword" type="password" placeholder="Пароль">
+    <input id="regPasswordConfirm" type="password" placeholder="Повторите пароль">
+    <button id="registerSubmit">Зарегистрироваться</button>
+  </div>
+</div>
+
+</header>
+    <main id="chat" class="chat-area"></main>
+
+    <div class="composer">
+      <input
+        id="author"
+        placeholder="Ваше имя"
+        title="Войти или зарегистрироваться"
+      />
+      <input id="text" placeholder="Введите сообщение..." />
+      <button id="sendBtn" type="button">Отправить</button>
+    </div>
+  </div>
+
+  <script src="client_app.js"></script>
+</body>
+</html>
